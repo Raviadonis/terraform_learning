@@ -1,6 +1,6 @@
 ## Create a VPC network
 resource "google_compute_network" "cloud_ui_poc_network" {
-  name                    = "cloud_ui_poc"
+  name                    = "cloud-ui-poc-01"
   auto_create_subnetworks = false
 }
 
