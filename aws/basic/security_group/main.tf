@@ -9,10 +9,31 @@ locals {
 
 module "app_sg" {
  for_each = local.application_sg
-  source              = "../modules/sg"
+  source              = "../modules/sg"  # Change the path accordingly
   description         = "${each.key} Security Group"
   sg_name             = each.key
   from_port           = each.value.port
   to_port             = each.value.port
   src_ip              = each.value.source_ip
+}
+
+  
+resource "aws_security_group" "dev_test" {
+  description = "SG for web server"
+
+  ingress {
+    from_port       = var.from_port
+    protocol        = "tcp"
+    to_port         = var.to_port
+    cidr_blocks     = var.src_ip
+    description     = "allow ingress port"
+  }
+
+  egress {
+    from_port       = var.from_port
+    protocol        = "tcp"
+    to_port         = var.to_port
+    cidr_blocks     = var.src_ip
+    description     = "allow egress port"
+  }
 }
