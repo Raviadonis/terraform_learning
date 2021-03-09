@@ -37,3 +37,24 @@ resource "aws_security_group" "dev_test" {
     description     = "allow egress port"
   }
 }
+  
+  
+variable "sg_name" {
+  default = ""
+}
+
+variable "description" {
+  default = ""
+}
+
+variable "from_port" {
+  default = ""
+}
+
+variable "to_port" {
+  default = ""
+}
+
+variable "src_ip" {
+  default = ""
+}
