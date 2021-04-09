@@ -1,16 +1,4 @@
 # Infra variables.tf
-variable "access_key" {
-     default = "<YOUR AWS ACCESS KEY>"
-}
-
-variable "secret_key" {
-     default = "<YOUR AWS SECRET KEY>"
-}
-
-variable "region" {
-     default = "us-east-1"
-}
-
 variable "availabilityZone" {
      default = "us-east-1a"
 }

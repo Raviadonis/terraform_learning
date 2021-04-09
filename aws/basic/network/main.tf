@@ -1,4 +1,4 @@
-## Create VPC/Subnet/Security Group/Network ACL
+## Create VPC Subnet Security Group Network ACL
 
 # Create the VPC
 resource "aws_vpc" "My_VPC" {
@@ -140,8 +140,10 @@ resource "aws_route" "My_VPC_internet_access" {
   gateway_id             = aws_internet_gateway.My_VPC_GW.id
 }
 
+/*
 # Associate the Route Table with the Subnet
 resource "aws_route_table_association" "My_VPC_association" {
   subnet_id      = aws_subnet.My_VPC_Subnet.id
   route_table_id = aws_route_table.My_VPC_route_table.id
 }
+*/

@@ -1,2 +1,2 @@
-# terraform_learning
-Terraform code reference for AWS
+# Terraform learning
+Terraform code reference for multiple Cloud Providers and in-built TF features
