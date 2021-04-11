@@ -1,0 +1,8 @@
+# Sample JSON input
+{
+  "inputs": [
+        {
+          "tenant-pair": {"tenant-name":  "storage-name", "tenant-key": "key-name"}
+        }
+      ]
+}
